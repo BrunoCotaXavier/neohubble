@@ -9,6 +9,7 @@ use Illuminate\View\View;
 
 class BlogController extends Controller
 {
+
     /* public function __construct()
     {
         $this->authorizeResource(Blog::class, 'blog');
@@ -37,13 +38,19 @@ class BlogController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $validated = $request->validate([
-            'message' => 'required|string',
-        ]);
+        // Verifica se o usuário tem a permissão 'create_blog'
+        if ($request->user()->hasRole('admin')) {
+            $validated = $request->validate([
+                'message' => 'required|string',
+            ]);
 
-        $request->user()->blog()->create($validated);
+            $request->user()->blog()->create($validated);
 
-        return redirect(route('blog.index'));
+            return redirect(route('blog.index'));
+        } else {
+            // Retorne uma resposta de erro ou redirecione para algum lugar
+            return redirect()->back()->with('error', 'Você não tem permissão para criar blogs.');
+        }
     }
 
     /**
@@ -88,9 +95,9 @@ class BlogController extends Controller
     public function destroy(Blog $blog): RedirectResponse
     {
         $this->authorize('delete', $blog);
- 
+
         $blog->delete();
- 
+
         return redirect(route('blog.index'));
     }
 }
