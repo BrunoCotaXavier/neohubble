@@ -10,10 +10,6 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <!-- Importar os estilos compilados -->
-        <link rel="stylesheet" href="{{ mix('/assets/css/app.css') }}">
-        <!-- Importar os scripts compilados -->
-        <script type="module" src="{{ mix('/assets/js/app.js') }}"></script>
 
 
         <!-- Scripts -->
