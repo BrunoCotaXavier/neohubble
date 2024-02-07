@@ -22,6 +22,7 @@ use App\Http\Controllers\Email\EmailController;
     ->middleware(['auth', 'verified']); */
 
 Route::resource('blog', BlogController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('blog', BlogController::class)->only(['store']);
 });
