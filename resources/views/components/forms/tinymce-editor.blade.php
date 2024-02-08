@@ -5,7 +5,11 @@
         <script>
             tinymce.init({
                 selector: 'textarea#default', // Replace this CSS selector to match the placeholder element for TinyMCE
-                plugins: 'code table advlist link image lists',
+                plugins: [
+                    'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+                    'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+                    'media', 'table', 'emoticons', 'template', 'help'
+                    ],
                 toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
             });
         </script>
