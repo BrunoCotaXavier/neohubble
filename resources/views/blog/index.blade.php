@@ -38,13 +38,14 @@
     </script>
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         @role('admin')
-        <form method="POST" action="{{ route('blog.store') }}">
+        <x-forms.tinymce-editor/>
+        <!-- <form method="POST" action="{{ route('blog.store') }}">
             @csrf
             <textarea name="message" placeholder="{{ __('No que está pensando?') }}"
                 class="block w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">{{ old('message') }}</textarea>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <x-primary-button style="background-color: #4F46E5" class="mt-4">{{ __('Publicar') }}</x-primary-button>
-        </form>
+        </form> -->
         @endrole
         <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
             @foreach ($blog as $blog_item)
@@ -91,7 +92,7 @@
                         </x-dropdown>
                         @endif
                     </div>
-                    <p style="white-space: pre-wrap" class="mt-4 text-lg text-gray-900">{{ $blog_item->message }}</p>
+                    <p >{!! $blog_item->message !!}</p>
                 </div>
             </div>
             @endforeach
