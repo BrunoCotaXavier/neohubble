@@ -19,6 +19,8 @@ services:
             IGNITION_LOCAL_SITES_PATH: '${PWD}'
         volumes:
             - '.:/var/www/html'
+            - /etc/letsencrypt/live/neohubble.com/fullchain.pem:/etc/ssl/certs/fullchain.pem
+            - /etc/letsencrypt/live/neohubble.com/privkey.pem:/etc/ssl/private/privkey.pem
         networks:
             - sail
         depends_on:
