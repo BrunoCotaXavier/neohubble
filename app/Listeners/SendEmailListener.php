@@ -28,8 +28,7 @@ class SendEmailListener implements ShouldQueue
         $data = $event->data;
 
         // Notificar usando a classe Notification
-        Notification::route('mail', $data['email'])
-            ->route('mail', 'brunocota@hotmail.com.br')
+        Notification::route('mail', [$data['email'], 'brunocota@hotmail.com.br'])
             ->notify(new SendEmailNotification($data));
     }
 }
