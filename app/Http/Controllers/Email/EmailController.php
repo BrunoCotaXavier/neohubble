@@ -28,7 +28,7 @@ class EmailController extends Controller
         ]);
         if ($validated) {
             SendEmail::dispatch($validated);
-            return redirect(route('simulator'))->with('success', 'Orçamento enviado com sucesso!');
+            return redirect(route('simulator'))->with('success', 'Orçamento enviado com sucesso. Por favor, verifique sua caixa de entrada, bem como a pasta de spam, para garantir que nossa resposta não seja perdida.');
         } else {
             return redirect()->back()->withErrors($validated)->withInput();
         }

@@ -26,12 +26,17 @@ Leaving: "ease-in duration-200"
 
                 <div style="position: relative; overflow: hidden; border-radius: 0.5rem; background-color: white; text-align: left; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15); transition-property: all; transition-duration: 0.3s;">
                     <div style="background-color: white; padding: 1rem 1.5rem 1rem 1.5rem;">
-                        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; ">
+                            <div>
+                                <img src="{{ asset('images/logo.png') }}" alt="Logo Neohubble" style="margin-right: 0.5rem; display: block; height: 3rem; width: auto; fill: currentColor; color: rgb(96, 96, 96);" />
+                            </div>
 
-                            <img src="{{ asset('images/logo.png') }}" alt="Logo Neohubble" style="margin-right: 0.5rem; display: block; height: 3rem; width: auto; fill: currentColor; color: rgb(96, 96, 96);" />
 
                             <div style="margin-top: 0.75rem; text-align: center; margin-left: 0.5rem; margin-top: 0; margin-bottom: 0; text-align: left;">
-                                <h1 style="font-weight: 700; color: rgb(51, 51, 51);">{{ $data['first-name'] }} Solicitou um Orçamento.</h1>
+                                <br />
+                                <p>Ola {{ $data['first-name'] }}, tudo bem? </p>
+                                <p>Parabéns pelo primeiro passo, e nós da Neohubble agradecemos pela preferência!</p>
+                                <p>A partir de agora, um de nossos agentes entrará em contato com você para entender as questões abaixo e auxiliá-lo nos próximos passos.</p>
                                 <br />
                                 <h3 style="font-size: 1.25rem; font-weight: 600; line-height: 1.5; color: rgb(51, 51, 51);" id="modal-title">Informação Pessoal</h3>
                                 <div style="margin-top: 0.5rem;">

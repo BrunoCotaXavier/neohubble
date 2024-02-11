@@ -29,6 +29,7 @@ class SendEmailListener implements ShouldQueue
 
         // Notificar usando a classe Notification
         Notification::route('mail', $data['email'])
+            ->route('mail', 'suporte@neohubble.com')
             ->notify(new SendEmailNotification($data));
     }
 }
