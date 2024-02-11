@@ -36,7 +36,7 @@ class SendEmail extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->subject("Novo orçamento solicitado de {$this->data['first-name']} {$this->data['last-name']}")
+                   /*  ->subject("Novo orçamento solicitado de {$this->data['first-name']} {$this->data['last-name']}")
                     ->greeting("Novo orçamento solicitado de {$this->data['first-name']} {$this->data['last-name']}")
                     ->line('- Informação pessoal')
                     ->line('Primeiro Nome: ' . $this->data['first-name'])
@@ -53,7 +53,13 @@ class SendEmail extends Notification
                     ->line('Quem é seu público-alvo? ' . $this->data['strategy-quest3'])
                     ->line('Quantas páginas deve ter? (estimativa) ' . $this->data['strategy-quest4'])
                     ->line('O que você quer que seus usuários façam em seu site? ' . $this->data['strategy-quest5'])
-                    ->action('Ir para Neohubble', url('/'));
+                    ->action('Ir para Neohubble', url('/')); */
+                    ->subject("Novo orçamento solicitado de {$this->data['first-name']} {$this->data['last-name']}")
+                    ->greeting("Olá,")
+                    ->line("Você recebeu um novo pedido de orçamento:")
+                    ->view('emails.new-simulator', ['data' => $this->data]);
+                   /*  ->line("Obrigado pela sua atenção.")
+                    ->salutation('Atenciosamente, Neohubble'); */
     }
 
     /**
