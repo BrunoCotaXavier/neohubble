@@ -21,7 +21,7 @@ Leaving: "ease-in duration-200"
 -->
         <div style="position: fixed; inset: 0; background-color: rgba(127, 127, 127, 0.75); transition-property: opacity; transition-duration: 300ms; transition-timing-function: ease-out;"></div>
 
-        <div style="position: fixed; inset: 0; z-index: 10; width: 100vw; overflow-y: auto;">
+        <div style="position: fixed; inset: 0; z-index: 10; overflow-y: auto;">
             <div style="display: flex; min-height: 100vh; align-items: flex-end; justify-content: center; padding: 1rem; text-align: center;">
 
                 <div style="position: relative; overflow: hidden; border-radius: 0.5rem; background-color: white; text-align: left; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15); transition-property: all; transition-duration: 0.3s;">
