@@ -145,7 +145,7 @@
                     <label for="company-year" class="block text-sm font-semibold leading-6 text-gray-900">
                         Quantos anos ativa</label>
                     <div class="mt-2.5">
-                        <input type="number" name="company-year" id="company-year" :value="old('company-year')"
+                        <input type="number" name="company-year" id="company-year" placeholder="informe apenas o numero" :value="old('company-year')"
                             autocomplete="company-year"
                             class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('company-year')" class="mt-2" />
@@ -201,7 +201,7 @@
                         Quantas páginas deve ter? (estimativa)
                     </label>
                     <div class="mt-2.5">
-                        <input type="number" name="strategy-quest4" id="strategy-quest4" :value="old('strategy-quest4)"
+                        <input type="number" name="strategy-quest4" placeholder="informe apenas o numero" id="strategy-quest4" :value="old('strategy-quest4)"
                             autocomplete="strategy-quest4"
                             class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('strategy-quest4')" class="mt-2" />
