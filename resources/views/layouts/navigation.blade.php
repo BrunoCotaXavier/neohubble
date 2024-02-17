@@ -38,20 +38,18 @@
                     </x-dropdown>
 
                 </div>
-                <!-- <x-nav-link style="color: #4F46E5" target href="https://www.linkedin.com/company/neohubble"
-                    :active="request()->routeIs('linkedin')">
-                    {{ __('Linkedin') }}
-                </x-nav-link> -->
             </div>
 
             <!-- Navigation Links -->
             @guest
-            <div class="z-50 hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-nav-link class="text-sm font-semibold leading-6 text-gray-900" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <div class="z-50 hidden space-x-4 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link class="text-sm font-semibold leading-6 text-gray-900" :href="route('register')" :active="request()->routeIs('register')">
+                    Registrar-se 
+                </x-nav-link>
+                <p style="padding-top: 18px; margin: 5px">/</p>
+                <x-nav-link style="color: #4F46E5; margin-left: -4px;" class="text-sm font-semibold leading-6 text-gray-900" :href="route('login')" :active="request()->routeIs('login')">
                     Entrar <span class="ml-1" aria-hidden="true">&rarr;</span>
                 </x-nav-link>
-                <!-- <a href="login" class="text-sm font-semibold leading-6 text-gray-900">Entrar <span aria-hidden="true">&rarr;</span></a> -->
-                <!-- Add more navigation links as needed -->
             </div>
             @endguest
 
