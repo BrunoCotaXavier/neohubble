@@ -49,7 +49,7 @@
     </script>
     @endif
     @if(session('success'))
-    <div id="notification" class="z-1 relative isolate flex items-center gap-x-6 overflow-hidden bg-green-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+    <div id="notification" class="z-50 relative isolate flex items-center gap-x-6 overflow-hidden bg-green-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
         <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
             <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)">
             </div>
@@ -100,26 +100,28 @@
                 <h3 class="mb-4 mt-4 mr-4" style="color: #4F46E5">- Informação pessoal</h3>
                 <br />
                 <div>
-                    <label for="first-name" :value="__('Email')" class="block text-sm font-semibold leading-6 text-gray-900">
+                    <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">
                         Primeiro nome
                     </label>
                     <div class="mt-2.5">
-                        <input type="text" name="first-name" id="first-name" :value="old('first-name')" autocomplete="given-name" autofocus class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                        <x-input-error :messages="$errors->get('first-name')" class="mt-2" />
+                        <input type="text" name="first-name" id="first-name" value="{{ old('first-name') }}" autocomplete="given-name" autofocus class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        @error('first-name')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
                     </div>
                 </div>
                 <div>
                     <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Proximo
                         nome</label>
                     <div class="mt-2.5">
-                        <input type="text" name="last-name" id="last-name" :value="old('last-name')" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="text" name="last-name" id="last-name" value="{{ old('last-name') }}" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('last-name')" class="mt-2" />
                     </div>
                 </div>
                 <div class="sm:col-span-2">
                     <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
                     <div class="mt-2.5">
-                        <input type="email" name="email" id="email" :value="old('email')" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="email" name="email" id="email" value="{{ old('email') }}" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
                 </div>
@@ -137,7 +139,7 @@
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <input type="tel" name="phone-number" id="phone-number" :value="old('phone-number')" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="tel" name="phone-number" id="phone-number" value="{{ old('phone-number') }}" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('phone-number')" class="mt-2" />
                     </div>
                 </div>
@@ -149,7 +151,7 @@
                         Nome fantasia
                     </label>
                     <div class="mt-2.5">
-                        <input type="text" name="company-name" id="company-name" :value="old('company-name')" autocomplete="company-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="text" name="company-name" id="company-name" value="{{ old('company-name') }}" autocomplete="company-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('company-name')" class="mt-2" />
                     </div>
                 </div>
@@ -157,14 +159,14 @@
                     <label for="company-year" class="block text-sm font-semibold leading-6 text-gray-900">
                         Quantos anos ativa</label>
                     <div class="mt-2.5">
-                        <input type="number" name="company-year" id="company-year" placeholder="informe apenas o numero" :value="old('company-year')" autocomplete="company-year" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="number" name="company-year" id="company-year" placeholder="informe apenas o numero" value="{{ old('company-year') }}" autocomplete="company-year" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('company-year')" class="mt-2" />
                     </div>
                 </div>
                 <div class="sm:col-span-2">
                     <label for="company-description" class="block text-sm font-semibold leading-6 text-gray-900">Descrição sobre a empresa</label>
                     <div class="mt-2.5">
-                        <textarea name="company-description" id="company-description" :value="old('company-description')" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                        <textarea name="company-description" id="company-description" value="{{ old('company-description') }}" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                         <x-input-error :messages="$errors->get('company-description')" class="mt-2" />
                     </div>
                 </div>
@@ -175,7 +177,7 @@
                         Por que você está criando esse site?
                     </label>
                     <div class="mt-2.5">
-                        <input type="text" name="strategy-quest1" id="strategy-quest1" :value="old('strategy-quest1)" autocomplete="strategy-quest1" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="text" name="strategy-quest1" id="strategy-quest1" value="{{ old('strategy-quest1') }}" autocomplete="strategy-quest1" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('strategy-quest1')" class="mt-2" />
                     </div>
                 </div>
@@ -184,7 +186,7 @@
                         O que você oferece ao seu público?
                     </label>
                     <div class="mt-2.5">
-                        <input type="text" name="strategy-quest2" id="strategy-quest2" :value="old('strategy-quest2)" autocomplete="strategy-quest2" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="text" name="strategy-quest2" id="strategy-quest2" value="{{ old('strategy-quest2') }}" autocomplete="strategy-quest2" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('strategy-quest2')" class="mt-2" />
                     </div>
                 </div>
@@ -193,7 +195,7 @@
                         Quem é seu público-alvo?
                     </label>
                     <div class="mt-2.5">
-                        <input type="text" name="strategy-quest3" id="strategy-quest3" :value="old('strategy-quest3)" autocomplete="strategy-quest3" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="text" name="strategy-quest3" id="strategy-quest3" value="{{ old('strategy-quest3') }}" autocomplete="strategy-quest3" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('strategy-quest3')" class="mt-2" />
                     </div>
                 </div>
@@ -202,7 +204,7 @@
                         Quantas páginas deve ter? (estimativa)
                     </label>
                     <div class="mt-2.5">
-                        <input type="number" name="strategy-quest4" placeholder="informe apenas o numero" id="strategy-quest4" :value="old('strategy-quest4)" autocomplete="strategy-quest4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <input type="number" name="strategy-quest4" placeholder="informe apenas o numero" id="strategy-quest4" value="{{ old('strategy-quest4') }}" autocomplete="strategy-quest4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         <x-input-error :messages="$errors->get('strategy-quest4')" class="mt-2" />
                     </div>
                 </div>
@@ -210,7 +212,7 @@
                     <label for="strategy-quest5" class="block text-sm font-semibold leading-6 text-gray-900">O que você
                         quer que seus usuários façam em seu site?</label>
                     <div class="mt-2.5">
-                        <textarea name="strategy-quest5" id="strategy-quest5" :value="old('strategy-quest5)" rows="4" placeholder="Descreva sendo objetivo e claro." class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                        <textarea name="strategy-quest5" id="strategy-quest5" value="{{ old('strategy-quest5') }}" rows="4" placeholder="Descreva sendo objetivo e claro." class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                         <x-input-error :messages="$errors->get('strategy-quest5')" class="mt-2" />
                     </div>
                 </div>
