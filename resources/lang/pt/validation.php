@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'required' => 'O campo é obrigatório.',
-    'string' => 'O campo deve ser uma string.',
+    'required' => 'O compo :attribute é obrigatório.',
+    'string' => 'O :attribute campo deve ser uma string.',
     'max' => [
         'string' => 'O campo não pode ter mais de :max caracteres.',
     ],

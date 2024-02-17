@@ -106,6 +106,9 @@
             <x-responsive-nav-link :href="route('login')">
                 {{ __('Entrar') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('register')">
+                {{ __('Register') }}
+            </x-responsive-nav-link>
             @endguest
             @auth
             <x-responsive-nav-link :href="route('dashboard')">
