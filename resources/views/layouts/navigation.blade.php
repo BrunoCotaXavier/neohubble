@@ -15,13 +15,13 @@
                 <x-nav-link :href="route('blog.index')" :active="request()->routeIs('blog.index')">
                     {{ __('Blog') }}
                 </x-nav-link>
-                <div style="position: absolute; margin-left: 190px; margin-top: 2px" class="hidden sm:flex sm:items-center sm:ms-6">
-                    <x-dropdown align="right" width="48">
+                <div style="z-index: 50; position: absolute; margin-left: 190px; margin-top: 2px" class="z-50 hidden sm:flex sm:items-center sm:ms-6">
+                    <x-dropdown class="custom-z-index" align="right" width="48" style="z-index: 50;">
                         <x-slot name="trigger">
-                            <button class="inline-flex items-center border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                <div class="z-50">Redes</div>
-                                <div class="ms-1">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <button class="inline-flex items-center border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150" style="z-index: 50;">
+                                <div style="color: #4F46E5; z-index: 50;">Redes</div>
+                                <div class="ms-1" style="z-index: 50;">
+                                    <svg style="color: #4F46E5; z-index: 50;" class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                     </svg>
                                 </div>
@@ -36,6 +36,7 @@
                             </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>
+
                 </div>
                 <!-- <x-nav-link style="color: #4F46E5" target href="https://www.linkedin.com/company/neohubble"
                     :active="request()->routeIs('linkedin')">

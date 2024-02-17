@@ -16,7 +16,7 @@
     </script>
     @if(session('success'))
     <div id="notification"
-        class="z-50 relative isolate flex items-center gap-x-6 overflow-hidden bg-green-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+        class="z-1 relative isolate flex items-center gap-x-6 overflow-hidden bg-green-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
         <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
             aria-hidden="true">
             <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
@@ -60,7 +60,7 @@
         <div class="absolute -z-10 inset-x-0 top-[-10rem] 0 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
             aria-hidden="true">
             <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-65rem)] sm:w-[102.1875rem]"
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                style="margin-top: 100px; clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
             </div>
         </div>
         <div class="mx-auto max-w-2xl text-center">
