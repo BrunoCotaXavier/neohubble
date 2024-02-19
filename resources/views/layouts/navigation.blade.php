@@ -36,7 +36,6 @@
                             </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>
-
                 </div>
             </div>
 
