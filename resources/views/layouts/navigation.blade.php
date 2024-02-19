@@ -28,10 +28,10 @@
                             </button>
                         </x-slot>
                         <x-slot name="content">
-                            <x-dropdown-link href="https://www.linkedin.com/company/neohubble">
+                            <x-dropdown-link target="_blank" href="https://www.linkedin.com/company/neohubble">
                                 {{ __('Likedin') }}
                             </x-dropdown-link>
-                            <x-dropdown-link href="https://www.instagram.com/neohubble">
+                            <x-dropdown-link target="_blank" href="https://www.instagram.com/neohubble">
                                 {{ __('Instagram') }}
                             </x-dropdown-link>
                         </x-slot>
