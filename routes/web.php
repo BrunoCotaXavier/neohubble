@@ -22,10 +22,10 @@ use App\Http\Controllers\Email\EmailController;
     ->middleware(['auth', 'verified']); */
 
 Route::resource('blog', BlogController::class)->only(['index', 'store', 'edit', 'update', 'destroy']);
-
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('blog', BlogController::class)->only(['store']);
 });
+Route::get('/blog/{title}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::post('/send-email', [EmailController::class, 'sendEmail'])->name('send.email');
 

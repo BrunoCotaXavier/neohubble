@@ -11,6 +11,7 @@ class Blog extends Model
     use HasFactory;
     protected $fillable = [
         'message',
+        'title'
     ];
     public function user(): BelongsTo
     {

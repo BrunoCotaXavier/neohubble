@@ -42,6 +42,7 @@ class BlogController extends Controller
         if ($request->user()->hasRole('admin')) {
             $validated = $request->validate([
                 'message' => 'required|string',
+                'title' => 'required|string',
             ]);
 
             $request->user()->blog()->create($validated);
@@ -53,13 +54,6 @@ class BlogController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Blog $blog)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -71,6 +65,12 @@ class BlogController extends Controller
         return view('blog.edit', [
             'blog' => $blog,
         ]);
+    }
+
+    public function show($title): View
+    {
+        $blog = Blog::where('title', $title)->firstOrFail();
+        return view('blog.show', ['blog' => $blog]);
     }
 
     /**

@@ -25,17 +25,6 @@
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const expandButtons = document.querySelectorAll('.content-expander + button');
-
-            expandButtons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    const contentExpander = this.previousElementSibling;
-                    contentExpander.classList.toggle('expanded');
-                    this.textContent = contentExpander.classList.contains('expanded') ? 'Ver Menos' : 'Ver Mais';
-                });
-            });
-        });
         document.getElementById('dismissBtn').addEventListener('click', function() {
             document.getElementById('notification').style.display = 'none';
         });
@@ -86,9 +75,7 @@
                     <div class="content-expander">
                         <p>{!! $blog_item->message !!}</p>
                     </div>
-                    @if(strlen($blog_item->message) > 100)
-                    <button class="mt-2 text-blue-500 hover:underline" style="color: #4F46E5">Ver Mais</button>
-                    @endif
+                    <a class="mt-2 text-blue-500 hover:underline" style="color: #4F46E5" href="{{route('blog.show', $blog_item->title)}}">Ver Mais</a>
                 </div>
             </div>
             @endforeach
@@ -99,11 +86,6 @@
                 /* Defina a altura máxima inicial para mostrar */
                 overflow: hidden;
                 transition: max-height 0.3s ease;
-            }
-
-            .content-expander.expanded {
-                max-height: none;
-                /* Permite que o conteúdo seja totalmente expandido */
             }
         </style>
     </div>
