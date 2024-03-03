@@ -22,7 +22,7 @@
                 placeholder="{{ __('No que está pensando?') }}">{{ old('message', $blog->message) }}</textarea>
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <div class="mt-4 space-x-2">
-                <x-primary-button style="background-color: #4F46E5">{{ __('Salvar') }}</x-primary-button>
+                <x-primary-button style="background-color: #5815DD">{{ __('Salvar') }}</x-primary-button>
                 <a href="{{ route('blog.index') }}">{{ __('Cancelar') }}</a>
             </div>
         </form>

@@ -23,6 +23,6 @@
         <textarea id="default" name="message" placeholder="{{ __('No que está pensando?') }}"></textarea>
         <x-input-error :messages="$errors->get('message')" class="mt-2" />
 
-        <x-primary-button style="background-color: #4F46E5" class="mt-4">{{ __('Publicar') }}</x-primary-button>
+        <x-primary-button style="background-color: #5815DD" class="mt-4">{{ __('Publicar') }}</x-primary-button>
     </form>
 </div>

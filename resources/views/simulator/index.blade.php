@@ -97,7 +97,7 @@
         <form id="form" action="{{ route('send.email') }}" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
             @csrf
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                <h3 class="mb-4 mt-4 mr-4" style="color: #4F46E5">- Informação pessoal</h3>
+                <h3 class="mb-4 mt-4 mr-4" style="color: #5815DD">- Informação pessoal</h3>
                 <br />
                 <div>
                     <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">
@@ -144,7 +144,7 @@
                     </div>
                 </div>
 
-                <h3 class="mb-4 mt-4" style="color: #4F46E5">- Informações sobre a empresa</h3>
+                <h3 class="mb-4 mt-4" style="color: #5815DD">- Informações sobre a empresa</h3>
                 <br />
                 <div>
                     <label for="company-name" class="block text-sm font-semibold leading-6 text-gray-900">
@@ -170,7 +170,7 @@
                         <x-input-error :messages="$errors->get('company-description')" class="mt-2" />
                     </div>
                 </div>
-                <h3 class="mb-4 mt-4" style="color: #4F46E5">- Estratégia</h3>
+                <h3 class="mb-4 mt-4" style="color: #5815DD">- Estratégia</h3>
                 <br />
                 <div>
                     <label for="strategy-quest1" class="block text-sm font-semibold leading-6 text-gray-900">

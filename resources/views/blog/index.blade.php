@@ -75,7 +75,7 @@
                     <div class="content-expander">
                         <p>{!! $blog_item->message !!}</p>
                     </div>
-                    <a class="mt-2 text-blue-500 hover:underline" style="color: #4F46E5" href="{{route('blog.show', $blog_item->title)}}">Ver Mais</a>
+                    <a class="mt-2 text-blue-500 hover:underline" style="color: #5815DD" href="{{route('blog.show', $blog_item->title)}}">Ver Mais</a>
                 </div>
             </div>
             @endforeach

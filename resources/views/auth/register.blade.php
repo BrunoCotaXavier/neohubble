@@ -44,7 +44,7 @@
                 {{ __('Ja possui um registro?') }}
             </a>
 
-            <x-primary-button style="background-color: #4F46E5;" class="ms-4">
+            <x-primary-button style="background-color: #5815DD;" class="ms-4">
                 {{ __('Register') }}
             </x-primary-button>
         </div>

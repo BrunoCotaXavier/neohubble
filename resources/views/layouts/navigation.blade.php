@@ -19,9 +19,9 @@
                     <x-dropdown class="custom-z-index" align="right" width="48" style="z-index: 50;">
                         <x-slot name="trigger">
                             <button class="inline-flex items-center border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150" style="z-index: 50;">
-                                <div style="color: #4F46E5; z-index: 50;">Redes</div>
+                                <div style="color: #5815DD; z-index: 50;">Redes</div>
                                 <div class="ms-1" style="z-index: 50;">
-                                    <svg style="color: #4F46E5; z-index: 50;" class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <svg style="color: #5815DD; z-index: 50;" class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                     </svg>
                                 </div>
@@ -46,7 +46,7 @@
                     Registrar-se 
                 </x-nav-link>
                 <p style="padding-top: 18px; margin: 5px">/</p>
-                <x-nav-link style="color: #4F46E5; margin-left: -4px;" class="text-sm font-semibold leading-6 text-gray-900" :href="route('login')" :active="request()->routeIs('login')">
+                <x-nav-link style="color: #5815DD; margin-left: -4px;" class="text-sm font-semibold leading-6 text-gray-900" :href="route('login')" :active="request()->routeIs('login')">
                     Entrar <span class="ml-1" aria-hidden="true">&rarr;</span>
                 </x-nav-link>
             </div>

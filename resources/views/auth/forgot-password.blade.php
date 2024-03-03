@@ -17,7 +17,7 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <x-primary-button  style="background-color: #4F46E5;">
+            <x-primary-button  style="background-color: #5815DD;">
                 {{ __('Link de redefinição de senha de email') }}
             </x-primary-button>
         </div>
