@@ -1,6 +1,7 @@
 <!-- navigation.blade.php -->
 
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-200">
+  
     <!-- Primary Navigation Menu -->
     <div class="z-50 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -9,13 +10,18 @@
                 <a href="/">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo Neohubble" class="mr-5 block h-12 w-auto fill-current text-gray-600" />
                 </a>
+                <x-nav-link :active="request()->routeIs('#services')">
+                    <a href="/#servicos" id="link-servicos" onclick="scrollToServices()" class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                        {{ __('Serviços') }}
+                    </a>
+                </x-nav-link>
                 <x-nav-link :href="route('simulator')" :active="request()->routeIs('simulator')">
                     {{ __('Orçamento') }}
                 </x-nav-link>
                 <x-nav-link :href="route('blog.index')" :active="request()->routeIs('blog.index')">
                     {{ __('Blog') }}
                 </x-nav-link>
-                <div style="z-index: 50; position: absolute; margin-left: 190px; margin-top: 2px" class="z-50 hidden sm:flex sm:items-center sm:ms-6">
+                <div style="z-index: 50; position: absolute; margin-left: 260px; margin-top: 2px" class="z-50 hidden sm:flex sm:items-center sm:ms-6">
                     <x-dropdown class="custom-z-index" align="right" width="48" style="z-index: 50;">
                         <x-slot name="trigger">
                             <button class="inline-flex items-center border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150" style="z-index: 50;">
@@ -43,7 +49,7 @@
             @guest
             <div class="z-50 hidden space-x-4 sm:-my-px sm:ml-10 sm:flex">
                 <x-nav-link class="text-sm font-semibold leading-6 text-gray-900" :href="route('register')" :active="request()->routeIs('register')">
-                    Registrar-se 
+                    Registrar-se
                 </x-nav-link>
                 <p style="padding-top: 18px; margin: 5px">/</p>
                 <x-nav-link style="color: #5815DD; margin-left: -4px;" class="text-sm font-semibold leading-6 text-gray-900" :href="route('login')" :active="request()->routeIs('login')">

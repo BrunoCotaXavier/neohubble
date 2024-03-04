@@ -42,7 +42,7 @@
   <div class="bg-white">
     <div class="relative isolate px-6 lg:px-8">
       <div class="absolute w-9 sm:w-auto -z-10 transform-gpu blur-3xl" aria-hidden="true">
-        <div class="relative -z-10 left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-50 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        <div class="relative -z-10 left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-50 sm:opacity-70 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
         </div>
       </div>
       <div class="mx-auto lg:max-w-3xl flex items-center justify-center">
@@ -178,7 +178,7 @@
             <div class="lg:pr-4">
               <div class="lg:max-w-lg">
                 <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Como <span style="color: #5815DD;">criar</span> meu site?</h1>
-                <br/>
+                <br />
                 <div>
                   <p class="mt-6 text-base font-semibold leading-7 text-indigo-600">- Primeiro passo, briefing.</p>
                   <p class="text-lg leading-8 text-gray-600">É fundamental entendermos sua visão para o site. Por isso, solicitamos que responda algumas perguntas em <a style="color: #5815DD; text-decoration: underline; cursor: pointer;" href="/simulator">Solicitar Orçamento</a>. Dessa forma, nossa equipe poderá entrar em contato e avançarmos juntos para os próximos passos.</p>
@@ -192,7 +192,7 @@
             </div>
           </div>
           <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-            <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="{{ asset('images/criar-um-site.jpeg') }}" alt="Orçamento de site"  />
+            <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="{{ asset('images/criar-um-site.jpeg') }}" alt="Orçamento de site" />
           </div>
           <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div class="lg:pr-4">
@@ -220,7 +220,7 @@
                   </li>
                 </ul>
                 <p class="mt-8 text-base font-semibold leading-7 text-indigo-600">- Terceiro passo, conclusão.</p>
-                <p >Após a conclusão das três etapas, <strong>Front-end, Back-end e Deploy</strong> seu site estará pronto e acessível para todos, bastando acessar seu domínio, por exemplo, meusite.com.br.</p>
+                <p>Após a conclusão das três etapas, <strong>Front-end, Back-end e Deploy</strong> seu site estará pronto e acessível para todos, bastando acessar seu domínio, por exemplo, meusite.com.br.</p>
                 <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">Depois como <span style="color: #5815DD;">utilizar</span> meu site?</h2>
                 <p class="mt-6">Após a entrega do site, nossa equipe especializada realizará um treinamento completo para você e seus colaboradores aprenderem a utilizar todas as funcionalidades do seu novo site. Além disso, oferecemos um mês de suporte gratuito para garantir que você tenha profissionais cuidando de tudo e possa desfrutar do conforto de ter seu site em boas mãos.</p>
                 <p class="mt-6">Não perca tempo, comece agora solicitando seu orçamento! <a style="color: #5815DD; text-decoration: underline; cursor: pointer;" href="/simulator">Solicitar Orçamento</a></p>
@@ -231,4 +231,106 @@
       </div>
     </div>
   </div>
+
+  <div class="bg-white">
+    <div id="servicos" class="text-center py-42" style="margin-top: -50px;">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        Nossos <span style="color: #5815DD;">websites</span> desenvolvidos.
+      </h2>
+    </div>
+    <div class="sm:flex sm:justify-content-center">
+      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 style="color: #5815DD;" class="text-2xl font-bold tracking-tight">Institucional</h2>
+
+        <div class="mt-4 flex justify-between">
+          <div>
+            <h3 class="text-lg text-gray-700">
+              <span aria-hidden="true" class="absolute inset-0"></span>
+              Websites de empresas, ONGs e instituições educacionais são plataformas online que apresentam informações sobre a organização, incluindo sua missão, visão e serviços oferecidos. Eles servem como um ponto de contato central para clientes, doadores ou alunos em potencial, fornecendo uma visão geral da entidade e suas atividades.
+            </h3>
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
+          <div class="group relative">
+            <a target="_blank" target="_blank" href="images/neohubble-antiga.svg">
+              <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="{{ asset('images/neohubble-antiga.svg') }}" alt="site-criado" />
+              </div>
+            </a>
+          </div>
+
+          <div class="group relative">
+            <a target="_blank" href="images/neohubble-nova.png">
+              <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="{{ asset('images/neohubble-nova.png') }}" alt="site-criado" />
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 style="color: #5815DD;" class="text-2xl font-bold tracking-tight">E-Commerce</h2>
+
+        <div class="mt-4 flex justify-between">
+          <div>
+            <h3 class="text-lg text-gray-700">
+              <span aria-hidden="true" class="absolute inset-0"></span>
+              O e-commerce, ou comércio eletrônico, é uma plataforma online na qual produtos ou serviços são comprados e vendidos. Funciona como uma vitrine virtual, onde os consumidores podem navegar, selecionar e comprar itens sem a necessidade de visitar uma loja física.
+            </h3>
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
+          <div class="group relative">
+            <a target="_blank" target="_blank" href="images/andcoy.svg">
+              <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="{{ asset('images/andcoy.svg') }}" alt="site-criado" />
+              </div>
+            </a>
+          </div>
+
+          <div class="group relative">
+            <a target="_blank" href="images/lamen.svg">
+              <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="{{ asset('images/lamen.svg') }}" alt="site-criado" />
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 style="color: #5815DD;" class="text-2xl font-bold tracking-tight">Landing page</h2>
+
+        <div class="mt-4 flex justify-between">
+          <div>
+            <h3 class="text-lg text-gray-700">
+              <span aria-hidden="true" class="absolute inset-0"></span>
+              Uma Landing Page é uma ferramenta essencial no arsenal de marketing digital. Projetada para receber tráfego de fontes específicas, como anúncios, ela oferece vantagens significativas. Sua simplicidade não apenas facilita a navegação, mas também é uma opção mais econômica em comparação com abordagens mais complexas.
+            </h3>
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:gap-x-8">
+          <div class="group relative">
+            <a target="_blank" href="images/5tubos.svg">
+              <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="{{ asset('images/5tubos.svg') }}" alt="site-criado" />
+              </div>
+            </a>
+          </div>
+
+          <div class="group relative">
+            <a target="_blank" href="images/amor-de-mae.svg">
+              <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="{{ asset('images/amor-de-mae.svg') }}" alt="site-criado" />
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
 </x-app-layout>
