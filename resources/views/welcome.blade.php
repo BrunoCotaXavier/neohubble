@@ -59,7 +59,7 @@
             <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Seu sucesso começa aqui, na <span style="color: #5815DD;">Neohubble</span>.
             </h1>
-            <p class="mt-7 text-lg leading-8 text-gray-600" style="text-justify: kashida;">
+            <p class="mt-7 text-lg leading-8 text-gray-600">
               Junte-se a nós na Neohubble e comece sua jornada digital hoje mesmo. Clique em "Iniciar" para uma consulta gratuita e descubra como podemos transformar sua visão em realidade online.
             </p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -245,7 +245,6 @@
         <div class="mt-4 flex justify-between">
           <div>
             <h3 class="text-lg text-gray-700">
-              <span aria-hidden="true" class="absolute inset-0"></span>
               Websites de empresas, ONGs e instituições educacionais são plataformas online que apresentam informações sobre a organização, incluindo sua missão, visão e serviços oferecidos. Eles servem como um ponto de contato central para clientes, doadores ou alunos em potencial, fornecendo uma visão geral da entidade e suas atividades.
             </h3>
           </div>
@@ -276,7 +275,6 @@
         <div class="mt-4 flex justify-between">
           <div>
             <h3 class="text-lg text-gray-700">
-              <span aria-hidden="true" class="absolute inset-0"></span>
               O e-commerce, ou comércio eletrônico, é uma plataforma online na qual produtos ou serviços são comprados e vendidos. Funciona como uma vitrine virtual, onde os consumidores podem navegar, selecionar e comprar itens sem a necessidade de visitar uma loja física.
             </h3>
           </div>
@@ -307,7 +305,6 @@
         <div class="mt-4 flex justify-between">
           <div>
             <h3 class="text-lg text-gray-700">
-              <span aria-hidden="true" class="absolute inset-0"></span>
               Uma Landing Page é uma ferramenta essencial no arsenal de marketing digital. Projetada para receber tráfego de fontes específicas, como anúncios, ela oferece vantagens significativas. Sua simplicidade não apenas facilita a navegação, mas também é uma opção mais econômica em comparação com abordagens mais complexas.
             </h3>
           </div>
@@ -333,4 +330,5 @@
         </div>
       </div>
     </div>
+  </div>
 </x-app-layout>
