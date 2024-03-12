@@ -55,8 +55,11 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDCVQ4HJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="min-h-screen bg-gray-100">
-        @include('layouts.navigation')
+    <div class="min-h-screen relative bg-gray-100">
+        <div class="fixed w-full z-50 top-0">
+            @include('layouts.navigation')
+        </div>
+        <div style="padding-top: 64px;"></div>
 
         <!-- Page Heading -->
         @if (isset($header))
@@ -71,6 +74,7 @@
         <mainx>
             {{ $slot }}
             </main>
+            
     </div>
 </body>
 
