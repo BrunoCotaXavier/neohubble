@@ -1,4 +1,4 @@
-<div class="w-full flex justify-center">
+<div class="w-full flex justify-center bg-black">
     <div class="p-5">
         <a target="_blank" href="https://www.instagram.com/neohubble/">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#5814dd" viewBox="0 0 256 256">
