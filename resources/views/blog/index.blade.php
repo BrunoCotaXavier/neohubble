@@ -80,7 +80,7 @@
             </div>
             @endforeach
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center text-gray-900">
             @include('components.tabBottom.tabBottom')
         </div>
         <style>
